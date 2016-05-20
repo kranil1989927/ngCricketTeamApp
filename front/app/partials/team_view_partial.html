@@ -1,0 +1,35 @@
+<div style="width: 1000px; margin: 0 auto;  padding-top 20px">
+	<div style="float: right">
+    	<a href="/index.html#/teams"> Back to Teams </a>
+  	</div>
+
+	<div class="alert alert-danger" role="alert" data-ng-show="page_load_error">{{page_load_error}}</div>
+	<h3> {{ team.title }} ({{ team.name }}) </h3>
+
+	<div class="alert alert-danger" role="alert" data-ng-show="load_error_text">{{load_error_text}}</div>
+
+	<div class="panel panel-default" style="width: 990px; background-color: #fafafa">
+	    <div class="panel-body">
+	      {{ team.description }}
+	    </div>
+  	</div>
+
+  	<div class="photo thumbnail" style="width: 240px; height: 250px; overflow: hidden; background-color: #f8f8f8; float: left; margin-right: 10px" ng-repeat="player in team.players">
+	    <div style="width: 230px; height: 180px; overflow: hidden">
+	      	<a href="/index.html#/teams/{{team_name}}/players/{{player.filename}}">
+				<img src="/media/{{team_name}}/thumb/{{player.filename}}"/>
+			</a>
+	    </div>
+	    <p style="padding: 5px 2px">
+	      <b>{{player.name}}</b> -  {{player.description}}
+	    </p>	   
+  	</div>	
+
+	<div style="clear: left"></div>
+
+	<p>
+		<a href="index.html#/teams/{{team_name}}/upload">
+			<button type="button" class="btn btn-success">Add Player to this team</button>
+		</a>
+	</p>
+</div>

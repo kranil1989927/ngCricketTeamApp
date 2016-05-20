@@ -1,0 +1,39 @@
+<html data-ng-app="cricketWikiApp">
+	<head>
+		<title>Cricket Wiki</title>
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/angular-route.min.js"></script>
+		<script type="text/javascript" src="js/angular-animate.js"></script>
+  		<script type="text/javascript" src="js/ui-bootstrap-tpls-1.3.2.min.js"></script>
+ 		<script type='text/javascript' src="js/jquery.min.js"></script>
+ 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+		<script type='text/javascript' src="js/angular-file-upload.js"></script>
+		<script type="text/javascript" src="js/angular-cookies.js"></script>
+		
+		<!-- Put controllers and modules here -->
+		<script type="text/javascript" src="app/app.js"></script>
+		<script type="text/javascript" src="app/controllers/cricket_team_controller.js"></script>
+		<script type="text/javascript" src="app/controllers/cricket_team_view_controller.js"></script>
+		<script type="text/javascript" src="app/controllers/player_view_controller.js"></script>
+		<script type="text/javascript" src="app/controllers/player_upload_controller.js"></script>
+		<script type="text/javascript" src="app/controllers/user_controller.js"></script>
+		<script type="text/javascript" src="app/controllers/error_controller.js"></script>
+
+		<script type="text/javascript" src="app/services/team_service.js"></script>
+
+	</head>
+	<body>
+		<div id="top_bar">
+    		<a href="index.html#/"><div class="glyphicon glyphicon-camera"></div></a>
+      		<div id="title"> Cricket Teams </div>
+ 		 </div>
+		<!-- <div data-ng-include="'./app/partials/user_partial.html'" ></div> -->
+
+		<div class="view-animate-container">
+			<ng-view class="view-animate"></ng-view>
+		</div>
+	</body>
+</html>

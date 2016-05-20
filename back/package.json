@@ -1,0 +1,9 @@
+{
+    "name": "cricket_team_server",
+    "description": "Angular Cricket Wikipedia Server",
+    "private": true,
+    "dependencies": {
+        "async": "0.2.x",
+        "express": "3.x"
+    }
+}

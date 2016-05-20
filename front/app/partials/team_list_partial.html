@@ -1,0 +1,52 @@
+<div class="alert alert-danger" role="alert" data-ng-show="page_load_error">{{page_load_error}}</div>
+<div data-ng-show="!loading_done"> Loading cricket teams</div>
+
+<div style="clear: left"></div>
+
+<div style="margin: 10px 50px" data-ng-show="loading_done">
+	<p><input type="text" placeholder="Search Cricket team...." data-ng-model="searchFor" size="30"/></p>
+	<p>
+		Displaying {{ teams.length | pluralise:{one:"team", more:"teams"} }}
+	</p>
+	<ct-Teams teamdata="team" data-ng-repeat="team in teams | multifieldfilter: { findMe: searchFor, fields: ['title', 'description' ] } |orderBy:'country'">	  
+	</ct-Teams>			
+
+	<div style="clear:left"></div>
+
+	<div data-ng-controller="AddTeamDialogController">
+		<script type="text/ng-template" id="myModalContent.html">
+			<div class="modal-header">
+            	<h4>Create a New Team</h4>
+        	</div>
+        	<div class="modal-body">
+        		<div class="alert alert-danger" role="alert" data-ng-show="add_team_error">{{add_team_error}}</div>			
+				<form name="add_team_form" novalidate>
+					<p style="width: 100%">
+						<div style="float:right;"> 
+				    		<input type="text" placeholder="Country.." data-ng-model="adding_team.country" size="15"/>
+				    	</div>									
+				   		<input type="text" placeholder="Title.." data-ng-model="adding_team.title" size="20"/>
+				  	</p>
+				  	<div class="description">
+					 	<p>
+					  		<textarea placeholder="Description.." data-ng-model="adding_team.description" rows="5" style="width: 100%"></textarea> 
+					  	</p>
+					  	<p>
+					  		<input type="text" placeholder="Team Name.." data-ng-model="adding_team.name" size="10"/>
+					  	</p>
+					  	<p>
+					  		<button data-ng-click="addTeam(adding_team)" type="button" class="btn btn-success"> Add New Team</button>
+					  	</p>			    
+				  	</div>	
+				</form>			  
+			</div>
+			<div class="modal-footer">
+            	<button class="btn btn-primary" ng-click="ok()">OK</button>
+            	<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        	</div>
+		</script>
+	</div>
+	
+	<div style="clear:left"></div>
+	<button class="btn btn-success" ng-click="openAddTeamDialog()">Create New Team</button>	
+</div>

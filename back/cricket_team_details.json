@@ -1,0 +1,48 @@
+[
+  {
+    "name": "IND",
+    "title": "Indian Cricket Team",
+    "country": "India",
+    "description": "Indian Cricket Team is ranked 2nd in ODI,\nWon 2 times world cup.",
+    "players": [
+      {
+        "filename": "sachin_tendulkar.jpg",
+        "name": "Sachin Tendulkar",
+        "description": " One of the God Gifted Player in World Cricket"
+      },
+      {
+        "filename": "sourav_ganguly.jpg",
+        "name": "Saurav Ganguly",
+        "description": " One of the best captain and God of off side"
+      },
+      {
+        "filename": "Mahendra_Singh_Dhoni.jpg",
+        "name": "Mahendra Singh Dhoni",
+        "description": "Best Indian Captain ever."
+      },
+      {
+        "filename": "Rahul_Dravid.jpg",
+        "name": "Rahul Dravid",
+        "description": "The Wall of Indian cricket."
+      }
+    ]
+  },
+  {
+    "name": "AUS",
+    "title": "Australia Cricket Team",
+    "country": "Australia",
+    "description": "Five times world champions.",
+    "players": [
+      {
+        "filename": "brett_lee.jpg",
+        "name": "Brett Lee",
+        "description": "World fastest bowler ever"
+      },
+      {
+        "filename": "ricky_ponting.jpg",
+        "name": "Ricky Ponting",
+        "description": "Best batsman"
+      }
+    ]
+  }
+]
